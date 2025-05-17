@@ -1,0 +1,31 @@
+/* Estilo general de la página */
+body {
+  background: linear-gradient(to right, #007991, #78ffd6);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Tarjeta del resultado del clima */
+.card {
+  background-color: rgba(207, 206, 206, 0.4);
+  border: none;
+  border-radius: 1rem;
+  min-height: 200px;
+}
+
+/* Selector de ciudad */
+.form-select {
+  background-color: #ffffffcc;
+  color: #000;
+}
+
+/* Título con sombra para mejor visibilidad */
+.titulo {
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* Estilo del spinner de carga */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
