@@ -1,0 +1,36 @@
+Informe: Estudio de la API de Datos Públicos de Chile
+
+¿Qué recursos proporciona?
+La API de Datos Públicos de Chile ofrece acceso a una variedad de recursos gubernamentales clasificados por tipo de información y por la entidad que los proporciona. 
+Algunos de los recursos más destacados son:
+- Información meteorológica del Servicio Meteorológico de la Armada.
+- Datos sobre el sistema de transporte público (como paradas, horarios y localización de buses).
+- Estadísticas de salud pública, que incluyen casos confirmados de COVID-19 y disponibilidad de camas.
+- Indicadores económicos del Banco Central, como el índice de precios al consumidor, tasas de interés y cotizaciones de divisas.
+- Información demográfica y censal del Instituto Nacional de Estadísticas (INE).
+Estos recursos permiten que programadores, investigadores o ciudadanos obtengan datos oficiales actualizados de manera gratuita y automatizada, resultando muy útil para análisis, 
+desarrollo de aplicaciones móviles, visualizaciones o estudios académicos.
+
+¿Qué métodos HTTP utiliza cada endpoint?
+La gran mayoría de los endpoints de esta API RESTful se basan en el método HTTP GET, que permite acceder a la información sin modificarla. Por ejemplo:
+GET(https://api. apis. gob. cl/flights/v1/arrivals)
+Esta solicitud proporciona datos en formato JSON sobre los vuelos que han llegado últimamente. No se emplean métodos como POST, PUT o DELETE,
+ya que los usuarios sólo tienen la capacidad de leer la información sin realizar cambios. 
+Ciertos endpoints requieren autenticación mediante una clave API, que debe enviarse ya sea como parámetro o en los encabezados HTTP,
+sobre todo para acceder a datos más delicados o restringidos.
+
+¿Cómo se organizan las URLs y los parámetros?
+Las URLs de esta API están dispuestas de forma ordenada y lógica, conforme al estilo REST. Tienen el siguiente formato:
+(https://api. apis. gob. cl/{servicio}/{versión}/{recurso})
+Por ejemplo:
+(https://api. apis. gob. cl/weather/v1/stations)
+En esta URL, "weather" representa el servicio (clima), "v1" señala la versión de la API, y "stations" corresponde al recurso específico que se consulta. 
+Además, se pueden agregar parámetros (query strings) para filtrar la información, como por ejemplo:
+? region=13anddate=2023-12-01
+Así, el usuario puede personalizar los resultados según la región, la fecha u otros criterios disponibles. 
+Esto proporciona a la API flexibilidad y facilidad de integración en una variedad de proyectos.
+
+Conclusión:
+La API de Datos Públicos de Chile ofrece un acceso estructurado a información oficial proveniente de diversas entidades gubernamentales. 
+Su diseño RESTful, el uso del método GET y la posibilidad de aplicar filtros a través de parámetros la convierten en una herramienta muy valiosa para desarrolladores
+, estudiantes y cualquier persona que desee emplear datos del gobierno de forma automatizada y eficiente.
